@@ -1,0 +1,35 @@
+{{>header}}
+{{>nav}}
+<section class="my-5 container">
+    <div class="row mb-3 justifiy-content-end">
+        <a href="/add" class="btn btn-primary col-2">Add New User</a>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+             {{#each data}} 
+            <tr>
+               
+           <td>
+               {{this._id}}
+                </td>
+                  <td>
+                      {{this.name}}
+                </td>
+                  <td>
+                    <a href="/show" class="btn btn-primary mx-2">Show</a>
+                    {{!-- <a href="/addoperation" class="btn btn-warning mx-2">add Operation</a> --}}
+                </td>
+                
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</section>
+{{>footer}}

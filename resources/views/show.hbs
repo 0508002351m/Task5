@@ -1,0 +1,47 @@
+{{>header}}
+{{>nav}}
+<section class="my-5 container">
+    <form>
+        <div class="mb-3">
+            <input class="form-control" placeholder="Id" name="id" >
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" name="showCu" value="showCu">show Customer</button>
+        </div>
+    </form>    
+    <br><br><br>
+   
+
+
+<h2>Name:{{cust.name}}</h2>
+<h4>Operations:</h4>
+ <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Value</th>
+                <th>Type</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+         {{#each cust.operations}}
+        <tbody>
+           
+            <tr>
+               
+           <td>
+               {{this.value}}
+                </td>
+                  <td>
+                      {{this.type}}
+                </td>
+                  <td>
+                   {{this.at}}
+                </td>
+                
+            </tr>
+        </tbody>
+           {{/each}}
+    </table>
+  
+</section>
+{{>footer}}
